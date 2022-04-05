@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "parcel src/html/index.html",
-        "build": "parcel build src/html/index.html"
+        "dev": "parcel src/index.html",
+        "build": "parcel build src/index.html"
     },
     "repository": {
         "type": "git",
