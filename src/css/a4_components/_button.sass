@@ -1,0 +1,19 @@
+@use 'a2_variables' as *
+@use 'a3_utilities' as *
+
+@mixin button-primary()
+
+    @include text-large
+
+    border: 0px solid $color-primary
+    border-radius: 23px
+    
+    background-color: $color-primary
+    color: $color-black
+    
+    padding-block: 10px
+    padding-inline: 20px
+    
+    &:hover, 
+    &:focus
+        color: $color-accent
