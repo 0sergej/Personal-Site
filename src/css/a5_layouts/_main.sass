@@ -1,0 +1,42 @@
+@use 'a2_variables' as *
+@use 'a3_utilities' as *
+@use 'a4_components' as *
+
+.main
+    display: flex
+    flex-direction: column
+
+    padding: $padding-base
+    padding-top: ($padding-base + 1rem)
+
+    align-items: center
+    text-align: center
+
+    height: 100vh
+
+    &__header
+        @include header
+
+        margin-block-end: map-get($size, medium, 500 )
+
+    &__title
+        @include subheader
+
+        margin-block-end: map-get($size, small, 700 )
+        color: $color-primary
+
+    &__text
+        @include text
+        max-width: 34ch
+
+        & span
+            font-weight: $font-weight-semibold
+
+            color: $color-white
+
+    & a
+
+        margin-block-start: auto
+
+    &__button
+        @include button-primary
