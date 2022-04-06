@@ -1,0 +1,86 @@
+@use 'a2_variables' as *
+@use 'a3_utilities' as *
+
+.work
+
+    padding: $padding-base
+    margin-block-start: 20vh
+    
+    align-items: center
+    text-align: center
+
+    &__header
+        @include header
+
+        margin-block-end: 7rem
+        
+        & span
+            color: $color-primary
+
+    @include card-layout(4, 5)
+
+.work__container
+    transform: translateX(0%) translateY(0%) scale(1)
+    @include card-transiotion
+
+    width: min(100% - 3rem, 15rem)
+
+    &:focus,
+    &:hover
+        transform: translateX(-5%) translateY(5%) scale(1.1)
+
+.work__card
+    position: relative
+
+    display: flex
+
+    background-color: $color-white
+
+    aspect-ratio: 1/1
+    
+    margin-inline: auto
+
+
+    &::before
+        content: ''
+        position: absolute
+        bottom: 1rem
+        left: 1rem
+        z-index: -1
+
+        background-color: $color-primary
+
+        width: 100%
+        height: 100%
+
+        @include card-transiotion(background-color)
+
+
+    &:focus::before,
+    &:hover::before
+        background-color: $color-accent
+
+.work__card > a:nth-of-type(1)
+    left:3%
+.work__card > a:nth-of-type(2)
+    right:3%
+
+.icon--link
+    position: absolute
+    top: 3%
+
+    background-color: $color-secondary
+
+    width: 3rem
+    aspect-ratio: 1/1
+
+    border-radius: 50%
+
+    &:focus,
+    &:hover
+        background-color: $color-primary
+
+.icon
+
+    width: 100%
+    height: 100%
