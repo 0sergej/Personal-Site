@@ -17,6 +17,7 @@
     "license": "ISC",
     "homepage": "https://github.com/0sergej/Personal-Site#readme",
     "devDependencies": {
+        "@parcel/transformer-sass": "^2.4.1",
         "parcel": "^2.0.0",
         "sass": "^1.49.11"
     }
