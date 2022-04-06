@@ -27,3 +27,5 @@ $size: (
         900: 20rem,
     ),
 );
+
+$margin-header: map-get($size, medium, 500)
