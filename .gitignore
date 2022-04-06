@@ -1,6 +1,6 @@
 # dependencies installed by npm
 node_modules
-.cache
+.parcel-cache
 
 # build
 dist
