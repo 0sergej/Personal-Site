@@ -1,0 +1,50 @@
+@use 'a2_variables' as *
+@use 'a3_utilities' as *
+
+.contact
+    padding: calc($padding-base + 1rem)
+    margin-block-start: 10rem
+
+    text-align: center
+
+.contact__header
+    @include header
+
+    margin-block-end: $margin-header
+    margin-inline: auto
+
+    color: $color-primary
+
+.contact__option
+    margin-block-end: 3rem
+
+    text-align: start
+
+.contact__container
+    display: flex
+
+    justify-content: space-between
+    align-content: baseline
+
+.option__header
+    @include subheader
+
+    margin-block-end: 2rem
+
+.option__text
+    margin-inline-start: 2rem
+
+    &:hover,
+    &:focus
+        color: $color-primary
+
+.resume
+    display: flex
+
+    margin-block-start: 7rem
+
+    justify-content: space-between
+    align-items: center
+
+.resume__header
+    @include subheader
