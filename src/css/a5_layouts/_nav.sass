@@ -1,0 +1,59 @@
+@use 'a2_variables' as *
+
+.nav
+    position: relative
+
+    grid-column: 2
+
+
+    margin-block-start: 2rem
+
+    justify-self: end
+    align-self: start
+
+
+.nav--foreground
+    position: relative
+
+    display: none //disables nav on small screens
+    
+    background-color: $color-primary
+    
+    border-radius: 10px
+
+    width: 40px
+    height: 8px
+
+    justify-self: end
+
+    @media screen and ( min-width: $breakpoint-medium )
+        display: block //shows nav on medium and large screen
+
+    &::after,
+    &::before
+
+        position: absolute
+
+        content: ""
+
+        background-color: inherit
+        border-radius: inherit
+
+        width: 40px
+        height: 8px
+
+    &::before
+        bottom: 15px
+        left: 0
+
+    &::after
+        top: 15px
+        left: 0
+
+.nav--background
+    position: absolute
+    left: 0
+    top: -16px
+
+    width: 40px
+    height: 40px
