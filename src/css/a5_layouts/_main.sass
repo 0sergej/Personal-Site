@@ -3,21 +3,49 @@
 @use 'a4_components' as *
 
 .main
-    padding: $padding-base
-    padding-inline-start: ($padding-base + 1rem)
+    padding: $padding-small
+    padding-inline-start: ($padding-small + 1rem)
 
     align-items: center
     text-align: center
 
     height: 95vh
 
+    @media (min-width: $breakpoint-medium)
+        display: grid
+        grid-template-columns: 1fr min(13rem, 1fr)
+        grid-template-rows: 1fr 1fr
+        grid-gap: $gap-small
+
+        padding: 8vw
+
+        text-align: start
+
+    &__title__container
+        grid-column: 1
+        grid-row: 1
+
+        justify-self: start
+        align-self: end
+
     &__title
         @include title
-
+    
         margin-block-end: $margin-header
+
+        @media screen and ( min-width: $breakpoint-medium )
+            margin-block-end: 0
 
     &__subtitle
         @include text
+
+    &__text__container
+        grid-column: 1
+        grid-row: 2
+
+        justify-self: start
+        align-self: baseline
+
 
     &__header
         @include subheader
@@ -25,9 +53,16 @@
         margin-block-end: map-get($size, small, 700 )
         color: $color-primary
 
+        @media screen and ( min-width: $breakpoint-medium )
+            margin-block-end: 1rem
+
     &__text
         @include text
         max-width: 34ch
+
+        @media screen and ( min-width: $breakpoint-medium )
+            max-width: 30ch
+            
 
         & span
             font-weight: $font-weight-semibold
@@ -35,8 +70,9 @@
             color: $color-white
 
     & a
-
         margin-block-start: auto
+
+        justify-self: end
 
     &__button
         @include button-primary
