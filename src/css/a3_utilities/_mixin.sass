@@ -48,28 +48,3 @@
 
     @media (min-width: $breakpoint-large)
         font-size: map-get($size, small, 700 )
-
-
-@mixin card-layout($number-show-medium, $number-show-large)
-
-    $number-margin-medium: $number-show-medium - 1
-    $number-margin-large: $number-show-large - 1
-
-    div:nth-of-type(n)
-        margin-block-end: $gap-small
-
-    @media (max-width: $breakpoint-medium)
-    
-        div:nth-of-type(n+#{$number-show-medium})
-            display: none
-    
-        div:nth-of-type(n+#{$number-margin-medium})
-            margin-block-end:0
-            
-    @media (max-width: $breakpoint-large)
-    
-        div:nth-of-type(n+#{$number-show-large})
-            display: none
-    
-        div:nth-of-type(n+#{$number-margin-large})
-            margin-block-end:  0
