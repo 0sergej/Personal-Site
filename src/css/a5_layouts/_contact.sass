@@ -2,10 +2,14 @@
 @use 'a3_utilities' as *
 
 .contact
-    padding: calc($padding-base + 1rem)
+    padding: calc($padding-small + 1rem)
     margin-block-start: 10rem
 
     text-align: center
+
+    @media screen and ( min-width: $breakpoint-medium )
+        padding: $padding-medium
+        
 
 .contact__header
     @include header

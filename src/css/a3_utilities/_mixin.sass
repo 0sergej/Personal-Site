@@ -21,7 +21,7 @@
     max-width: 14ch
 
     @media (min-width: $breakpoint-medium)
-        font-size: map-get($size, medium, 400 )
+        font-size: map-get($size, medium, 300 )
 
     @media (min-width: $breakpoint-large)
         font-size: map-get($size, medium, 700 )
@@ -56,7 +56,7 @@
     $number-margin-large: $number-show-large - 1
 
     div:nth-of-type(n)
-        margin-block-end: $gap
+        margin-block-end: $gap-small
 
     @media (max-width: $breakpoint-medium)
     
