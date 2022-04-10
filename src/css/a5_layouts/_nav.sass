@@ -1,6 +1,17 @@
 @use 'a2_variables' as *
 
-.nav
+$border-radius: 10px
+$width: 40px
+$height: 8px
+
+.nav--primary
+    position: fixed
+    inset: 0 0 0 0
+    z-index: 10
+    
+    background-color: $color-primary
+
+.nav--switch
     position: relative
 
     grid-column: 2
@@ -12,19 +23,21 @@
     align-self: start
 
 
-.nav--foreground
+.nav__switch--foreground
     position: relative
 
     display: none //disables nav on small screens
-    
+
     background-color: $color-primary
     
-    border-radius: 10px
+    border-radius: $border-radius
 
-    width: 40px
-    height: 8px
+    width: $width
+    height: $height
 
     justify-self: end
+
+    transition: transform 300ms linear, background-color 300ms linear
 
     @media screen and ( min-width: $breakpoint-medium )
         display: block //shows nav on medium and large screen
@@ -37,10 +50,13 @@
         content: ""
 
         background-color: inherit
-        border-radius: inherit
 
-        width: 40px
-        height: 8px
+        border-radius: $border-radius
+
+        width: $width
+        height: $height
+        
+        transition: transform 300ms linear, background-color 300ms linear
 
     &::before
         bottom: 15px
@@ -50,10 +66,13 @@
         top: 15px
         left: 0
 
-.nav--background
+.nav__switch--background
     position: absolute
     left: 0
     top: -16px
+    z-index: 100
 
-    width: 40px
-    height: 40px
+    width: $width
+    aspect-ratio: 1
+
+    cursor: pointer
