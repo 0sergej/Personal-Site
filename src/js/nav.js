@@ -9,3 +9,4 @@ NAV__SWITCH.addEventListener('click', () => {
     NAV__SWITCH__FOREGROUND.classList.toggle('switch')
     NAV__SWITCH.classList.toggle('switch')
 })
+    

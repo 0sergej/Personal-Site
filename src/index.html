@@ -13,8 +13,57 @@
     </head>
     <body>
         <nav class="nav--primary hidden">
+            <div class=" nav__container flex">
+                <div class="more">
+                    <h1 class="more__header">More of Me</h1>
+                    <a href="https://github.com/0sergej">
+                        <img src="./assets/icons/github-green.svg" alt="github">
+                    </a>
+                    <a href="https://www.linkedin.com/in/sergej-stojanovic-74266421b/">
+                        <img src="./assets/icons/linkedin-green.svg" alt="linkedin">
+                    </a>
+                    <a href="https://codepen.io/0sergej">
+                        <img src="./assets/icons/codepen-green.svg" alt="codepen">
+                    </a>
+                    <a href="https://www.instagram.com/jegres00/">
+                        <img src="./assets/icons/instagram-green.svg" alt="instagram">
+                    </a>
+                    <a href="https://twitter.com/Es0Gr">
+                        <img src="./assets/icons/twitter-green.svg
+                        " alt="twitter">
+                    </a>
+                    <a href="https://www.facebook.com/sergej.stojanovic.948">
+                        <img src="./assets/icons/facebook-green.svg" alt="facebook">
+                    </a>
+                </div>
+                <div class="navigation">
+                    <h1 class="navigation__header">
+                        Navigation
+                    </h1>
+                    <img src="./assets/icons/hi-green.svg" alt="hi">
+                    <a href="#home" class="hi__link">Hi There</a>
+                    <img src="./assets/icons/projects-green.svg" alt="projects">
+                    <a href="#work" class="featured__link">Featured Work</a>
+                    <ul class="navigation__list">
+                        <img src="./assets/icons/contact-green.svg" alt="contact">
+                        <a href="#contact" class="contact__link">Contact</a>
+                    </ul>
+                    <li class="e-mail__item">
+                        <img src="./assets/icons/email-green.svg" alt="e-mail_link">
+                        <a href="#email" class="email">E-mail</a>
+                    </li>
+                    <li class="phone">
+                        <img src="./assets/icons/phone-green.svg" alt="phone">
+                        <a href="#phone" class="phone__link">Phone</a>
+                    </li>
+                </div>
+                <div class="resume">
+                    <a href="" class="resume__link">My Resume</a>
+                    <img src="./assets/icons/resume-green.svg" alt="resume">
+                </div>
+            </div>
         </nav>
-        <main class="main flex--column">
+        <main id="home" class="main flex--column">
             <nav class="nav--switch">
                 <span class="nav__switch--background"></span>
                 <span class="nav__switch--foreground"></span>
@@ -41,7 +90,7 @@
                 <button class="main__button">Get in touch</button>
             </a>
         </main>
-        <section class="work flex--column">
+        <section id="work" class="work flex--column">
             <div class="work__subheader__container">
                 <h3 class="work__subheader">Featured Projects</h3>
                 <span class="line"></span>
@@ -117,7 +166,7 @@
                 </article>
             </div>
         </section>
-        <section class="web">
+        <section id="web" class="web">
             <div class="web__subheader__container">
                 <h3 class="web__subheader">More of ME</h3>
                 <span class="line"></span>
@@ -170,14 +219,14 @@
         </section>
         <section id="contact" class="contact">
             <div class="contact__subheader__container">
-                <h3 class="contact__subheader">More of ME</h3>
+                <h3 class="contact__subheader">Contact</h3>
                 <span class="line"></span>
                 <img src="./assets/icons/contact.svg" alt="projects" class="contact__icon">
             </div>
             <h2 class="contact__header">
                 Contact Me
             </h2>
-            <div class="contact__option">
+            <div id="email" class="contact__option">
                 <div class="contact__container">
                     <h3 class="option__header">Email:</h3>
                     <span class="line line--contact"></span>
@@ -185,17 +234,17 @@
                 </div>
                 <p class="option__text">sergej2stojanovic@gmail.com</p>
             </div>
-            <div class="contact__option">
+            <div id="phone" class="contact__option">
                 <div class="contact__container">
                     <h3 class="option__header">Phone:</h3>
                     <span class="line line--contact"></span>
-                    <img class="option__icon" src="./assets/icons/text.svg" alt="text"></img>
+                    <img class="option__icon" src="./assets/icons/phone.svg" alt="phone"></img>
                 </div>
                 <p class="option__text">+ (381) 66 828 9929</p>
             </div>
             <div class="resume">
                 <h3 class="resume__header">Resume:</h3>
-                <img src="./assets/icons/resume-white.svg" alt="resume" class="resume__icon">
+                <img src="./assets/icons/resume.svg" alt="resume" class="resume__icon">
             </div>
         </section>
         <footer class="footer">
