@@ -4,18 +4,38 @@
 .web
     display: grid
 
+    margin-block-start: $margin-section
+    padding: $padding-small
+    
     text-align: center
     
 .web__header
     @include header
 
-    margin-block-start: $margin-section
     margin-block-end: $margin-header
 
     margin-inline: auto
     
     & span
         color: $color-primary
+
+.web__subheader__container
+    display: none
+
+    margin-inline-start: 1.5rem
+    
+    justify-self: start
+    align-items: center
+
+    @media screen and ( min-width: $breakpoint-medium-large )
+        display: flex
+        
+
+.web__subheader
+    text-transform: uppercase
+    font-size: 0.9rem
+
+    color: $color-secondary
 
 .web__container
     display: grid
@@ -27,9 +47,13 @@
 
     @media (min-width: $breakpoint-medium)
         grid-template-columns: repeat(2, min(32vw, 15rem))
+        gap: $gap-medium
 
     @media (min-width: $breakpoint-large)
         grid-template-columns: repeat(3,20rem)
+
+    & *
+        transform: scale(1.075)
 
 .web--social
 

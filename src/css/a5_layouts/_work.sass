@@ -4,16 +4,20 @@
 .work
     padding: $padding-small
     margin-block-start: 10rem
+
+    grid-gap: $gap-small
     
     align-items: center
     text-align: center
 
-    @media screen and ( min-width: $breakpoint-medium )
+    @media screen and ( min-width: $breakpoint-medium-large)
         display: grid
         grid-template-columns: 1fr 1fr
 
         justify-items: center
-        
+
+    @media screen and ( min-width: $breakpoint-large )
+        grid-template-columns: repeat(3, 1fr)
 
 .work__header
     @include header
@@ -21,11 +25,35 @@
     grid-column: 1 / span 2
     
     margin-block-end: 7rem
+
+    @media screen and ( min-width: $breakpoint-medium-large )
+        margin-block-end: calc(7rem - #{$gap-small})
+
+        max-width: unset
+
+    @media screen and ( min-width: $breakpoint-large )
+        grid-column: 1 / span 3
     
     & span
         color: $color-primary
 
+.work__subheader__container
+    display: none
 
+    margin-inline-start: 1.5rem
+    
+    justify-self: start
+    align-items: center
+
+    @media screen and ( min-width: $breakpoint-medium-large )
+        display: flex
+
+
+.work__subheader
+    text-transform: uppercase
+    font-size: 0.9rem
+
+    color: $color-secondary
 
 .work__container
 
@@ -40,19 +68,38 @@
     &:hover
         transform: translateX(-5%) translateY(5%) scale(1.1)
     
-    @media screen and (max-width: $breakpoint-medium)
 
-        &:nth-of-type(n+3) //removes margin on last child
+    @media screen and (max-width: $breakpoint-medium-large)
+
+        &:nth-of-type(n+4) //removes margin on last child
             margin-block-end: 0
 
-        &:nth-of-type(n+4) //hiddes all card after 3rd
+        &:nth-of-type(n+5) //hiddes all card after 3rd
             display: none
     
-    @media screen and (min-width: $breakpoint-medium)
+    @media screen and ( min-width: $breakpoint-medium-large)
+
+        width: 25vw
+    @media screen and (min-width: $breakpoint-medium-large)
         margin-block-end: $padding-small
 
-        &:nth-of-type(n+5) //hiddes all card after 4rd
+        &:nth-of-type(n+6) //hiddes all card after 4rd
             display: none
+
+    @media screen and ( min-width: $breakpoint-large )
+        
+        width: 20vw
+
+        &:nth-of-type(-n+2)
+            grid-row: 3 / 5
+            align-self: middle
+        
+        &:nth-of-type(n+5)
+            display: block // shows all cards after 4th
+            grid-column: 2/3 // puts all card after 4th in the middle
+
+        &:nth-of-type(n+6)
+            grid-column: 3/3 // puts all card after 5th at the end
 
 .work__card
     position: relative
@@ -60,8 +107,8 @@
     display: flex
 
     background-color: $color-white
-
-    aspect-ratio: 1/1
+    
+    aspect-ratio: 1
     
     margin-inline: auto
 
@@ -96,7 +143,8 @@
 
     background-color: $color-secondary
 
-    width: 3rem
+    width: 5vw
+    max-width: 4rem
     aspect-ratio: 1/1
 
     border-radius: 50%
@@ -108,4 +156,3 @@
 .icon
 
     width: 100%
-    height: 100%
