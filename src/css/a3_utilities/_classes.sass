@@ -9,3 +9,24 @@
 
 .hidden
     display: none
+
+.block
+    display: block
+
+.switch
+
+    z-index: 10
+    
+    background-color: transparent !important
+    
+    transform: translateX(-75vw)
+
+    &::after,
+    &::before
+        background-color: $color-accent !important
+
+    &::before
+        transform: translateY(15px) rotate(45deg)
+
+    &::after
+        transform: translateY(-15px) rotate(-45deg)
