@@ -5,37 +5,38 @@
     font-size: map-get($size, medium, 400 )
 
     color: $color-white
-    max-width: 14ch
 
     @media (min-width: $breakpoint-medium)
-        font-size: map-get($size, medium, 800 )
 
-    @media (min-width: $breakpoint-large)
-        font-size: map-get($size, large, 300 )
+        font-size: map-get($size, medium, 800 )
         
+        max-width: 14ch
+
 @mixin header()
 
     font-size: map-get($size, medium, 300 )
 
     color: $color-white
-    max-width: 14ch
 
     @media (min-width: $breakpoint-medium)
         font-size: map-get($size, medium, 300 )
 
-    @media (min-width: $breakpoint-large)
-        font-size: map-get($size, medium, 700 )
+        margin-inline-start: $padding-small
+
+        max-width: 14ch
+
+        justify-self: start
+
 
 @mixin subheader()
 
     font-size: map-get($size, small, 700 )
-    max-width: 14ch
 
     @media (min-width: $breakpoint-medium)
         font-size: map-get($size, medium, 300 )
+        
+        max-width: 14ch
 
-    @media (min-width: $breakpoint-large)
-        font-size: map-get($size, medium, 500 )
 
 @mixin text()
 
@@ -45,6 +46,3 @@
 
     @media (min-width: $breakpoint-medium)
         font-size: map-get($size, small, 500 )
-
-    @media (min-width: $breakpoint-large)
-        font-size: map-get($size, small, 700 )
