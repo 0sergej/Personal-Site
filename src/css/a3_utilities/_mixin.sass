@@ -30,10 +30,15 @@
 
 @mixin subheader()
 
-    font-size: map-get($size, small, 700 )
+    font-size: map-get($size, small, 600 )
 
     @media (min-width: $breakpoint-medium)
-        font-size: map-get($size, medium, 300 )
+        font-size: map-get($size, small, 800 )
+        
+        max-width: 14ch
+        
+    @media (min-width: $breakpoint-large)
+        font-size: map-get($size, small, 900 )
         
         max-width: 14ch
 
