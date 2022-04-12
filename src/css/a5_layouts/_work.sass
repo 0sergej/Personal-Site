@@ -2,10 +2,13 @@
 @use 'a3_utilities' as *
 
 .work
-    padding: $padding-small
     margin-block-start: 10rem
+    margin-inline: auto
+    padding: $padding-small
 
     grid-gap: $gap-small
+
+    max-width: 80rem
     
     align-items: center
     text-align: center
@@ -58,6 +61,7 @@
 .work__container
 
     margin-block-end: $padding-small
+    margin-inline-end: 1rem
 
     width: min(100% - 3rem, 15rem)
 
@@ -92,7 +96,7 @@
 
         &:nth-of-type(-n+2)
             grid-row: 3 / 5
-            align-self: middle
+            align-self: center
         
         &:nth-of-type(n+5)
             display: block // shows all cards after 4th
@@ -141,7 +145,7 @@
     position: absolute
     top: 3%
 
-    background-color: $color-secondary
+    background-color: $color-white
 
     width: 5vw
     max-width: 4rem

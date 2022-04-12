@@ -2,10 +2,13 @@
 @use 'a3_utilities' as *
 
 .contact
-    padding: $padding-small
     margin-block-start: 10rem
+    margin-inline: auto
+    padding: $padding-small
 
     text-align: center
+
+    max-width: 80rem
 
     & * + *
         padding-inline-start: 7vw
@@ -61,7 +64,13 @@
         align-items: center
 
 .line--contact
+    display: none
+    
     padding-inline: 0
+
+    @media screen and ( min-width:$breakpoint-medium )
+        display: block
+        
 
 .option__header
     @include subheader
@@ -72,7 +81,6 @@
         @include text
 
         margin-block-end: 0
-
 
 .option__text
     @include text
