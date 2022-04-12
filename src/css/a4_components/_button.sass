@@ -4,16 +4,23 @@
 @mixin button-primary
 
     @include text
+    
+    padding-block: 10px
+    padding-inline: 20px
 
     border: 0px solid $color-primary
     border-radius: 23px
     
     background-color: $color-primary
     color: $color-black
+
+    cursor: pointer
+
+    width: 12.1rem
     
-    padding-block: 10px
-    padding-inline: 20px
+    transition: transform 90ms linear
     
     &:hover, 
     &:focus
         color: $color-accent
+        transform: scale(0.95)
