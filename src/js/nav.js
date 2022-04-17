@@ -14,6 +14,7 @@ function triggerNav() {
     NAV__SWITCH__FOREGROUND.classList.toggle('switch')
     NAV__SWITCH.classList.toggle('switch')
 
+    document.body.classList.toggle('no-scroll')
 
     navOpen = !navOpen
 }//turns nav on and off
