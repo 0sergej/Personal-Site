@@ -5,8 +5,6 @@ const NAV__SWITCH__FOREGROUND = document.querySelector(
 const NAV__PRIMARY = document.querySelector('.nav--primary')
 const LINKS = document.querySelectorAll('a.nav--a') //selects all links in nav
 
-console.log(LINKS)
-
 let width
 let navOpen = false
 function triggerNav() {
