@@ -3,31 +3,73 @@
 @use 'a4_components' as *
 
 .main
-    display: flex
-    flex-direction: column
-
-    padding: $padding-base
-    padding-top: ($padding-base + 1rem)
+    padding: $padding-small
+    padding-inline-start: ($padding-small + 1rem)
+    margin-inline: auto
 
     align-items: center
     text-align: center
 
-    height: 100vh
+    height: 95vh
+    max-width: 97rem
 
-    &__header
-        @include header
+    @media (min-width: $breakpoint-medium-large)
+        display: grid
+        grid-template-columns: 1fr min(13rem, 1fr)
+        grid-template-rows: 1fr 1fr
+        grid-gap: $gap-small
 
-        margin-block-end: map-get($size, medium, 500 )
+        padding: 8vw
+        padding-block-start: $padding-medium
+
+
+        text-align: start
+
+    &__title__container
+        grid-column: 1
+        grid-row: 1
+
+        justify-self: start
 
     &__title
+        @include title
+    
+        margin-block-end: $margin-header
+
+        @media screen and ( min-width: $breakpoint-medium )
+            margin-block-end: 0
+
+    &__subtitle
+        @include text
+
+    &__text__container
+        grid-column: 1
+        grid-row: 2
+
+        text-align: center
+
+        @media screen and ( min-width: $breakpoint-medium-large )
+            text-align: start
+        
+    &__header
         @include subheader
 
         margin-block-end: map-get($size, small, 700 )
+        margin-inline: auto
         color: $color-primary
+
+        @media screen and ( min-width: $breakpoint-medium-large )
+            margin-block-end: 1rem
+            margin-inline: 0
+
 
     &__text
         @include text
         max-width: 34ch
+
+        @media screen and ( min-width: $breakpoint-medium )
+            max-width: 30ch
+            
 
         & span
             font-weight: $font-weight-semibold
@@ -35,8 +77,9 @@
             color: $color-white
 
     & a
-
         margin-block-start: auto
+
+        justify-self: end
 
     &__button
         @include button-primary

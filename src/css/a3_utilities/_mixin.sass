@@ -1,27 +1,47 @@
 @use 'a2_variables' as *
 
-@mixin header()
+@mixin title()
 
     font-size: map-get($size, medium, 400 )
 
     color: $color-white
 
     @media (min-width: $breakpoint-medium)
-        font-size: map-get($size, medium, 800 )
 
-    @media (min-width: $breakpoint-large)
-        font-size: map-get($size, large, 300 )
+        font-size: map-get($size, medium, 800 )
+        
+        max-width: 14ch
+
+@mixin header()
+
+    font-size: map-get($size, medium, 300 )
+
+    color: $color-white
+
+    @media (min-width: $breakpoint-medium)
+        font-size: map-get($size, medium, 300 )
+
+        margin-inline-start: $padding-small
+
+        max-width: 14ch
+
+        justify-self: start
+
 
 @mixin subheader()
 
-    font-size: map-get($size, small, 700 )
-    max-width: 14ch
+    font-size: map-get($size, small, 600 )
 
     @media (min-width: $breakpoint-medium)
-        font-size: map-get($size, medium, 400 )
-
+        font-size: map-get($size, small, 800 )
+        
+        max-width: 14ch
+        
     @media (min-width: $breakpoint-large)
-        font-size: map-get($size, medium, 800 )
+        font-size: map-get($size, small, 900 )
+        
+        max-width: 14ch
+
 
 @mixin text()
 
@@ -30,19 +50,4 @@
     color: $color-secondary
 
     @media (min-width: $breakpoint-medium)
-        font-size: map-get($size, medium, 400 )
-
-    @media (min-width: $breakpoint-large)
-        font-size: map-get($size, medium, 800 )
-
-@mixin text-large()
-
-    font-size: map-get($size, small, 500 )
-
-    color: $color-secondary
-
-    @media (min-width: $breakpoint-medium)
-        font-size: map-get($size, medium, 400 )
-
-    @media (min-width: $breakpoint-large)
-        font-size: map-get($size, medium, 800 )
+        font-size: map-get($size, small, 500 )

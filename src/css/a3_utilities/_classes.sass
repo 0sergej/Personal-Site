@@ -1,0 +1,35 @@
+@use 'a2_variables' as *
+
+.flex
+    display: flex
+
+.flex--column
+    display: flex
+    flex-direction: column
+
+.hidden
+    display: none
+
+.block
+    display: block
+
+.no-scroll
+    overflow: hidden
+
+.switch
+
+    z-index: 10
+    
+    background-color: transparent !important
+    
+    transform: translateX(-75vw)
+
+    &::after,
+    &::before
+        background-color: $color-accent !important
+
+    &::before
+        transform: translateY(15px) rotate(45deg)
+
+    &::after
+        transform: translateY(-15px) rotate(-45deg)

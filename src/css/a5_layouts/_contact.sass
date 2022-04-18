@@ -1,0 +1,116 @@
+@use 'a2_variables' as *
+@use 'a3_utilities' as *
+
+.contact
+    margin-block-start: 10rem
+    margin-inline: auto
+    padding: $padding-small
+
+    text-align: center
+
+    max-width: 80rem
+
+    & * + *
+        padding-inline-start: 7vw
+        padding-inline-end: 4vw
+
+.contact__header
+    @include header
+
+    margin-block-end: $margin-header
+    margin-inline: auto
+
+    color: $color-primary
+
+    @media screen and ( min-width: $breakpoint-medium )
+        padding-inline-start: 0
+
+.contact__subheader__container
+    display: none
+
+    margin-inline-start: 1.5rem
+    
+    justify-self: start
+    align-items: center
+
+    @media screen and ( min-width: $breakpoint-medium-large )
+        display: flex
+
+    & * + *
+        padding-inline: 0
+
+.contact__subheader
+    text-transform: uppercase
+    font-size: 0.9rem
+
+    color: $color-secondary
+
+.contact__option
+    margin-block-end: 3rem
+
+    text-align: start
+
+.contact__container
+    display: flex
+
+    justify-content: space-between
+    align-content: baseline
+
+    @media screen and ( min-width: $breakpoint-medium )
+
+        margin-block-end: $padding-small
+        
+        justify-content: start
+        align-items: center
+
+.line--contact
+    display: none
+    
+    padding-inline: 0
+
+    @media screen and ( min-width:$breakpoint-medium )
+        display: block
+        
+
+.option__header
+    @include subheader
+
+    margin-block-end: 2rem
+
+    @media screen and ( min-width: $breakpoint-medium )
+        @include text
+
+        margin-block-end: 0
+
+.option__text
+    @include text
+
+    margin-inline-start: 2rem
+
+    word-break: break-all
+
+    &:hover,
+    &:focus
+        color: $color-primary
+
+.option__icon
+    padding-inline: 0
+
+
+.resume
+    display: flex
+
+    margin-block-start: 7rem
+
+    justify-content: space-between
+    align-items: center
+
+    @media screen and ( min-width: $breakpoint-medium )
+        display: none
+
+.resume__header
+    @include subheader
+
+.resume__icon:hover,
+.resume__icon:focus
+    cursor: pointer
